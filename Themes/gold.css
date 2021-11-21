@@ -1,0 +1,17 @@
+/*------------------------------------
+- COLOR Gold
+------------------------------------*/
+:root{
+    --primary_t1: #ffac00;
+    --primary_t2: #cc8900;
+    --primary_t3: #ffdf9e;
+    --primary_t4: #ffe7b7;
+    --primary_t5: #845900;
+    --primary_t6: #bc7f00;
+    --primary_t7: #db9300;
+    --primary_t8: #513700;
+    --primary_t9: #ffeecc;
+
+    --primary_shadow: rgba(255, 172, 0, 0.5);
+    --primary_text: #212529;
+}

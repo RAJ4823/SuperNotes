@@ -1,0 +1,18 @@
+/*------------------------------------
+- COLOR Rose
+------------------------------------*/
+
+:root{
+    --primary_t1: #ff0455;
+    --primary_t2: #d00043;
+    --primary_t3: #ffa2c0;
+    --primary_t4: #ffbbd1;
+    --primary_t5: #88002c;
+    --primary_t6: #c0003e;
+    --primary_t7: #df0048;
+    --primary_t8: #55001b;
+    --primary_t9: #ffd0df;
+
+    --primary_shadow: rgba(255, 4, 85, 0.5);
+    --primary_text: #fff;
+}

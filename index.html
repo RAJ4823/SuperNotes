@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notes</title>
+
+  <!-- bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Font CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Ubuntu:wght@400&display=swap"
+    rel="stylesheet">
+
+  <!-- Additional CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/Themes/temp.css">
+  <link rel="stylesheet" href="/Themes/main.css">
+  <link rel="stylesheet" href="/CSS/home.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <h2 class="navbar-brand oxy my-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">SuperNotes</h2>
+
+    <!-- Navbar toggler button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <!--Themes-->
+        <li class="navbar-expand-lg nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            style="color: white;">Themes</a>
+
+          <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+            <li id="rose">
+              <a class="dropdown-item" onclick="changeColor(1)">Rose </a>
+            </li>
+            <li id="gold">
+              <a class="dropdown-item" onclick="changeColor(2)"> Gold </a>
+            </li>
+            <li id="purple">
+              <a class="dropdown-item" onclick="changeColor(3)">Purple </a>
+            </li>
+            <li id="green">
+              <a class="dropdown-item" onclick="changeColor(4) ">Sea Green </a>
+            </li>
+            <li id="silver">
+              <a class="dropdown-item" onclick="changeColor(5)">Sonic Silver </a>
+            </li>
+
+            <hr class="dropdown-divider bg-primary"">
+            <li>
+              <a id="theme" class="dropdown-item" onclick="changeTheme()">Dark Mode</a>
+        </li>
+      </ul>
+      </li>
+
+      <!-- About -->
+      <li class="nav-item active">
+        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          About
+        </a>
+      </li>
+      </ul>
+
+      <!-- search box -->
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search Note" aria-label="Search">
+      </form>
+    </div>
+  </nav>
+
+  <!-- About Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title oxy" id="staticBackdropLabel">Made by <u><a class="text-primary"
+                href="https://rajhalpani.wordpress.com/about/" target="_blank"> Raj Patel </a></u></h5>
+        </div>
+
+        <div class="modal-body mx-auto">
+          <div>
+            <img class="img-thumbnail mx-auto d-block" src="/IMG/raj-logo-1.png" alt="logo">
+          </div>
+          <p class="my-2 d-flex justify-content-center">Thanks for using&nbsp;<span class="oxy">SuperNotes.</span></p>
+          <p class="my-2 d-flex justify-content-center font-weight-bold">Version 1.5 BETA</p>
+        </div>
+
+        <div class="modal-footer">
+          <div id="social">
+            <!-- Facebook -->
+            <a class="btn btn-link float-left text-primary m-1"
+              href="https://www.facebook.com/people/Raj-Patel/100013725934297/" role="button">
+              <i class="fab fa-facebook-f"></i></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-link btn-floating btn-lg text-primary m-1" href="https://www.twitter.com/RajPatel_4/"
+              role="button">
+              <i class="fab fa-twitter"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-link btn-floating btn-lg text-primary m-1" href="https://www.instagram.com/raj._.4/"
+              role="button">
+              <i class="fab fa-instagram"></i></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-link btn-floating btn-lg text-primary m-1" href="https://www.linkedin.com/in/raj-4823/"
+              role="button">
+              <i class="fab fa-linkedin"></i></a>
+            <!-- Github -->
+            <a class="btn btn-link btn-floating btn-lg text-primary m-1" href="https://github.com/RAJ4823"
+              role="button">
+              <i class="fab fa-github"></i></a>
+          </div>
+          <button type="button" class="btn btn-primary oxy float-right" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- varsion 1.0 alert -->
+  <div id="closeBar" class="alert alert-danger alert-dismissible fade show" role="alert">
+    <h5 style="display: inline-block;">Version 1.5 <span class="badge bg-primary text-white oxy">BETA </span></h5>
+    <button id="closeBtn" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <!-- input  -->
+  <div class="container my-4">
+    <div id="main" class="card">
+      <div class="card-body">
+        <h5 class="card-title">Add a title</h5>
+        <div class="form-group">
+          <input class="form-control title" id="addTitle" maxlength="18">
+        </div>
+        <h5 class="card-title">Add a note</h5>
+        <div class="form-group">
+          <textarea class="form-control txt" id="addTxt" rows="3"></textarea>
+          <p id="empty-note" class="text-danger"></p>
+        </div>
+        <button class="btn btn-primary" id="addBtn" onclick="addNote()">Add Note</button>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <!--Your Notes-->
+  <div class="d-flex justify-content-around align-items-center">
+    <h3>Your Notes</h3>
+    <i class="fas fa-bars" style="cursor: pointer;" data-bs-toggle="dropdown"></i>
+    <ul class="dropdown-menu bg-primary">
+      <li class="text-light btn ml-2" onclick="deleteAll()">Delete All</li>
+    </ul>
+  </div>
+  <hr class="bg-primary mx-3">
+
+  <!-- notes -->
+  <div id="notes" class="row container-fluid justify-content-center d-flex"></div>
+
+  <!--Edit Note Modal-->
+  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-bs-backdrop="static">
+    <div class="modal-dialog  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title oxy" id="exampleModalLabel">Edit note</h5>
+        </div>
+
+        <div class="modal-body">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">New title</h5>
+              <div class="form-group">
+                <input class="form-control title" id="editTitle" maxlength="18">
+              </div>
+              <h5 class="card-title">New note</h5>
+              <div class="form-group">
+                <textarea class="form-control txt" id="editTxt" rows="3"></textarea>
+                <p id="empty-edit" class="text-danger"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="time text-center">
+          <p>Created on : <strong id="noteTime" class="oxy"></strong></p>
+        </div>
+
+        <div class="modal-footer">
+          <button id="close" type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            onclick="closeNote()">Close</button>
+          <button id="saveBtn" type="button" class="btn btn-primary" data-bs-dismiss="modal"
+            onclick="saveNote()">Save</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Show Note Modal -->
+  <!-- <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title oxy" id="exampleModalLabel">Your Note</h5>
+        </div>
+
+        <div class="modal-body">
+          <div class="card">
+            <div class="card-header">
+              <p class="title" id="showTitle"></p>
+            </div>
+            <div class="card-body">
+              <p class="txt" id="showTxt"></p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal-footer">
+          <button id="close" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div> -->
+
+
+  <!-- Copyright -->
+  <footer id="footer" class="text-center text-white">
+    <div class="text-center text-light pt-3 pb-1">
+      &copy; <span class="oxy" style="cursor: default;"> Superverse 2021 | Raj Patel</span>
+    </div>
+  </footer>
+
+  <!-- bootstrap JavaScripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- Additional JavaScripts -->
+  <script src="https://kit.fontawesome.com/33dfc97c0a.js" crossorigin="anonymous"></script>
+  <script src="JS/SuperNote.js"></script>
+  <script src="JS/theme.js"></script>
+</body>
+
+</html>
+

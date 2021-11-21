@@ -1,0 +1,17 @@
+/*------------------------------------
+- COLOR Silver 
+------------------------------------*/
+:root{
+    --primary_t1: #777982;
+    --primary_t2: #5e6067;
+    --primary_t3: #c9cacd;
+    --primary_t4: #d6d7da;
+    --primary_t5: #3c3d42;
+    --primary_t6: #57585f;
+    --primary_t7: #65676f;
+    --primary_t8: #242427;
+    --primary_t9: #e1e1e3;
+
+    --primary_shadow: rgba(119, 121, 130, 0.5);
+    --primary_text: #fff;
+}

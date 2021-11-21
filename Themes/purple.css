@@ -1,0 +1,16 @@
+/*------------------------------------
+- COLOR Purple
+------------------------------------*/
+:root{
+    --primary_t1: #760bff;
+    --primary_t2: #5e00d7;
+    --primary_t3: #cea9ff;
+    --primary_t4: #ddc2ff;
+    --primary_t5: #3e008f;
+    --primary_t6: #5700c7;
+    --primary_t7: #6400e6;
+    --primary_t8: #28005c;
+    --primary_t9: #e8d7ff;
+    --primary_shadow: rgba(118, 11, 255, 0.5);
+    --primary_text: #fff;
+}
