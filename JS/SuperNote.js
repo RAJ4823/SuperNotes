@@ -235,7 +235,7 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("main").style.height = "auto";
   } else {
-    document.getElementById("main").style.top.height = "0";
+    document.getElementById("main").style.height = "0";
   }
   prevScrollpos = currentScrollPos;
 }
