@@ -56,8 +56,7 @@ nav .dropdown-item{
 #special{ color: #2fccac;}
 
 #main{
-    height : auto;
-    transition : height 0.5s;
+    transition : display 0.5s;
 }
 
 /* Cards */
