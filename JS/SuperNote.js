@@ -228,18 +228,4 @@ search.addEventListener('input', () => {
     main.style.display = 'flex';
 });
 
-//Hide main on scroll
-var prevScrollpos = window.pageYOffset;
-const startScroll = prevScrollpos;
-let main = document.getElementById("main");
-
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos < currentScrollPos) {
-    main.style.display = "none";
-  } else if( currentScrollPos == startScroll){
-    main.style.display = "flex";
-  }
-  prevScrollpos = currentScrollPos;
-}
 //Finally all bugs are fixed...
