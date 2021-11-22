@@ -56,6 +56,7 @@ nav .dropdown-item{
 #special{ color: #2fccac;}
 
 #main{
+    display : flex;
     transition : display 0.5s;
 }
 
