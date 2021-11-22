@@ -17,7 +17,7 @@ body{
     font-weight: bold;
 }
 .navbar-toggler{
-    background-image: url(/IMG/manu.png) no-repeat center center;
+    background-image: url(IMG/manu.png) no-repeat center center;
 }
 
 a, h2{
