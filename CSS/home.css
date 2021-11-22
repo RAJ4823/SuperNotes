@@ -55,6 +55,11 @@ nav .dropdown-item{
 #silver{ color: #5e6067;}
 #special{ color: #2fccac;}
 
+#main{
+    height : auto;
+    transition : height 0.5s;
+}
+
 /* Cards */
 .card{
     border-radius: 10px;
