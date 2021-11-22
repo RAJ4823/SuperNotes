@@ -1,13 +1,13 @@
 ls = localStorage;
 
 //Color changing script
-let color = document.querySelector(`link[href="/Themes/temp.css"]`);
+let color = document.querySelector(`link[href="Themes/temp.css"]`);
 //Accent themes
-let rose = "/Themes/rose.css";      //1
-let gold = "/Themes/gold.css";      //2
-let purple = "/Themes/purple.css";  //3
-let green = "/Themes/green.css";    //4 
-let silver = "/Themes/silver.css";  //5
+let rose = "Themes/rose.css";      //1
+let gold = "Themes/gold.css";      //2
+let purple = "Themes/purple.css";  //3
+let green = "Themes/green.css";    //4 
+let silver = "Themes/silver.css";  //5
 let colorArr = [0, rose, gold, purple, green, silver];
 let oldColor = ls.getItem("color");
 
