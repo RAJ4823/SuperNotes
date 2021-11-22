@@ -233,9 +233,9 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("main").style.height = "auto";
+    document.getElementById("main").style.display = "flex";
   } else {
-    document.getElementById("main").style.height = "0";
+    document.getElementById("main").style.display = "none";
   }
   prevScrollpos = currentScrollPos;
 }
