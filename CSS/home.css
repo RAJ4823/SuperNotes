@@ -57,7 +57,7 @@ nav .dropdown-item{
 
 #main{
     display : flex;
-    transition : display 0.5s;
+    transition : display 2s;
 }
 
 /* Cards */
