@@ -216,7 +216,7 @@ search.addEventListener('input', () => {
         let txt = ele.getElementsByTagName('p')[1].innerText.toLowerCase();
 
         if (title.includes(input) || txt.includes(input)) {
-            ele.style.display = 'block';
+            ele.style.display = 'flex';
         } else {
             ele.style.display = 'none';
         }
@@ -225,7 +225,18 @@ search.addEventListener('input', () => {
     if(input!='')
     main.style.display = 'none';
     else
-    main.style.display = 'block';
+    main.style.display = 'flex';
 });
 
+//Hide main on scroll
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("main").style.height = "auto";
+  } else {
+    document.getElementById("main").style.top.height = "0";
+  }
+  prevScrollpos = currentScrollPos;
+}
 //Finally all bugs are fixed...
