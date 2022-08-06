@@ -23,32 +23,32 @@ function changeColor(i) {
 }
 
 //Theme Changer
+let themeLink = document.querySelector(`link[href="Themes/bootstrap-dark/dist/css/bootstrap-dark.min.css"]`)
+let darkTheme = "Themes/bootstrap-dark/dist/css/bootstrap-dark.min.css";
+let lightTheme = "Themes/bootstrap-dark/dist/css/bootstrap-light.min.css";
 let themeTxt = document.getElementById("theme");
-let root = document.documentElement.style;
-root.setProperty('--x', ls.getItem('theme'));
 
-if (ls.getItem('theme') == 1 || themeTxt.innerHTML == 'Light Mode') {
+//Previous Theme
+themeLink.href = ls.getItem("theme");
+
+//Updating Previous Theme text
+if (ls.getItem('theme') == darkTheme)
     themeTxt.innerHTML = "Light Mode";
-}
-else {
+else
     themeTxt.innerHTML = "Dark Mode";
-}
+
 
 function changeTheme() {
     themeTxt = document.getElementById("theme");
 
     if (themeTxt.innerHTML != "Light Mode") {
-        let check = confirm("Colors will be varies from original. Dark mode is still in devlopment, Are you want to change theme ?");
-        if (check) {
-
-            root.setProperty('--x', '1');
-            themeTxt.innerHTML = "Light Mode";
-            ls.setItem("theme", 1);
-        }
+        themeLink.href = darkTheme;
+        themeTxt.innerHTML = "Light Mode";
+        ls.setItem("theme", darkTheme);
     } else {
-        root.setProperty('--x', '-1');
+        themeLink.href = lightTheme;
         themeTxt.innerHTML = "Dark Mode";
-        ls.setItem("theme", -1);
+        ls.setItem("theme", lightTheme);
     }
 }
 
