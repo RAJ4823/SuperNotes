@@ -23,9 +23,9 @@ function changeColor(i) {
 }
 
 //Theme Changer
-let themeLink = document.querySelector(`link[href="Themes/bootstrap-dark/dist/css/bootstrap-dark.min.css"]`)
-let darkTheme = "Themes/bootstrap-dark/dist/css/bootstrap-dark.min.css";
-let lightTheme = "Themes/bootstrap-dark/dist/css/bootstrap-light.min.css";
+let themeLink = document.querySelector(`link[href="Themes/light-dark/dist/css/bootstrap-dark.min.css"]`)
+let darkTheme = "Themes/light-dark/dist/css/bootstrap-dark.min.css";
+let lightTheme = "Themes/light-dark/dist/css/bootstrap-light.min.css";
 let themeTxt = document.getElementById("theme");
 
 //Previous Theme
