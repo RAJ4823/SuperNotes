@@ -210,13 +210,14 @@ search.addEventListener('input', () => {
     let input = search.value.toLowerCase();
     let notes = document.getElementsByClassName('noteCard');
     let main = document.getElementById('main');
-
+    let found = false;
     Array.from(notes).forEach(function (ele) {
         let title = ele.getElementsByTagName('p')[0].innerText.toLowerCase();
         let txt = ele.getElementsByTagName('p')[1].innerText.toLowerCase();
 
         if (title.includes(input) || txt.includes(input)) {
             ele.style.display = 'flex';
+            found = true;
         } else {
             ele.style.display = 'none';
         }
@@ -226,6 +227,11 @@ search.addEventListener('input', () => {
     main.style.display = 'none';
     else
     main.style.display = 'flex';
+
+    if(!found) {
+        let display = document.getElementById('notes');
+        display.innerHTML = "Nothing to show!";
+    }
 });
 
 //Finally all bugs are fixed...
