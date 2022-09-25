@@ -1,0 +1,17 @@
+/*------------------------------------
+- COLOR Sea Green
+------------------------------------*/
+:root{
+    --primary_t1: #2fccac;
+    --primary_t2: #25a289;
+    --primary_t3: #acecdf;
+    --primary_t4: #c1f0e7;
+    --primary_t5: #186858;
+    --primary_t6: #22967e;
+    --primary_t7: #28ae93;
+    --primary_t8: #0e3f35;
+    --primary_t9: #d2f4ed;
+
+    --primary_shadow: rgba(47, 204, 172, 0.5);
+    --primary_text: #212529;
+}

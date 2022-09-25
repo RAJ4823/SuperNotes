@@ -19,9 +19,9 @@
   <!-- Additional CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
   <link rel="icon" type="image/png" href="IMG/favicon-32x32.png">
-  <link rel="stylesheet" href="Themes/light-dark/dist/css/bootstrap-dark.min.css">
-  <link rel="stylesheet" href="Themes/temp.css" type="text/css">
-  <link rel="stylesheet" href="Themes/main.css" type="text/css">
+  <link rel="stylesheet" href="CSS/Themes/bootstrap-dark.css">
+  <link rel="stylesheet" href="CSS/Themes/colors/black.css" type="text/css">
+  <link rel="stylesheet" href="CSS/Themes/main.css" type="text/css">
   <link rel="stylesheet" href="CSS/home.css">
 
 </head>
@@ -48,19 +48,19 @@
 
           <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
             <li id="rose">
-              <a class="dropdown-item" onclick="changeColor(1)">Rose </a>
+              <a class="dropdown-item" onclick="changeColor('rose')">Rose</a>
             </li>
             <li id="gold">
-              <a class="dropdown-item" onclick="changeColor(2)"> Gold </a>
+              <a class="dropdown-item" onclick="changeColor('gold')">Gold</a>
             </li>
             <li id="purple">
-              <a class="dropdown-item" onclick="changeColor(3)">Purple </a>
+              <a class="dropdown-item" onclick="changeColor('purple')">Purple</a>
             </li>
             <li id="green">
-              <a class="dropdown-item" onclick="changeColor(4) ">Sea Green </a>
+              <a class="dropdown-item" onclick="changeColor('green') ">Sea Green</a>
             </li>
             <li id="silver">
-              <a class="dropdown-item" onclick="changeColor(5)">Sonic Silver </a>
+              <a class="dropdown-item" onclick="changeColor('silver')">Sonic Silver</a>
             </li>
 
             <hr class="dropdown-divider bg-primary"">
@@ -126,11 +126,11 @@
             <a class="btn btn-link btn-floating btn-lg text-primary m-1" href="https://www.linkedin.com/in/raj-4823/"
               role="button">
               <i class="fab fa-linkedin"></i></a>
-            <!-- Github
+            <!-- Github -->
             <a class="btn btn-link btn-floating btn-lg text-primary m-1" href="https://github.com/RAJ4823"
               role="button">
               <i class="fab fa-github"></i></a>
-            -->
+           
           </div>
           <button type="button" class="btn btn-primary oxy float-right" data-bs-dismiss="modal">Close</button>
         </div>
@@ -141,7 +141,7 @@
 
   <!-- varsion 1.0 alert -->
   <div id="closeBar" class="alert alert-danger alert-dismissible fade show" role="alert">
-    <h5 style="display: inline-block;">Version 2.0 <span class="badge bg-primary text-white oxy">Official</span></h5>
+    <h5 style="display: inline-block;">Version 2.5 <span class="badge bg-primary text-white oxy">Official</span></h5>
     <button id="closeBtn" type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -219,40 +219,10 @@
     </div>
   </div>
 
-  <!-- Show Note Modal -->
-  <!-- <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog  modal-dialog-centered">
-      <div class="modal-content">
-
-        <div class="modal-header justify-content-center">
-          <h5 class="modal-title oxy" id="exampleModalLabel">Your Note</h5>
-        </div>
-
-        <div class="modal-body">
-          <div class="card">
-            <div class="card-header">
-              <p class="title" id="showTitle"></p>
-            </div>
-            <div class="card-body">
-              <p class="txt" id="showTxt"></p>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="modal-footer">
-          <button id="close" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-
-      </div>
-    </div>
-  </div> -->
-
-
   <!-- Copyright -->
   <footer id="footer" class="text-center text-white">
     <div class="text-center text-light pt-3 pb-1">
-      &copy; <span class="oxy" style="cursor: default;"> Superverse 2021 | Raj Patel</span>
+      &copy; <span class="oxy" style="cursor: default;"> Superverse 2022 | Raj Patel</span>
     </div>
   </footer>
 
