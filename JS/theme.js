@@ -23,12 +23,14 @@ function changeColor(i) {
 }
 
 //Theme Changer
-let themeLink = document.querySelector(`link[href="CSS/Themes/bootstrap-dark.css"]`);
+let themeLink = document.querySelector(`link[href="CSS/Themes/bootstrap-light.css"]`);
 let path = "CSS/Themes/bootstrap-";
 let themeTxt = document.getElementById("theme");
 
 //Previous Theme
-themeLink.href = path + ls.getItem("theme") + '.css';
+let oldTheme = ls.getItem("theme");
+if (oldTheme == null) oldTheme = "light";
+themeLink.href = path + oldTheme + '.css';
 
 //Updating Previous Theme text
 if (ls.getItem('theme') == "dark")
