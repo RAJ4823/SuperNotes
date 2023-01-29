@@ -210,7 +210,7 @@ search.addEventListener('input', () => {
     let input = search.value.toLowerCase();
     let notes = document.getElementsByClassName('noteCard');
     let main = document.getElementById('main');
-    
+
     Array.from(notes).forEach(function (ele) {
         let title = ele.getElementsByTagName('p')[0].innerText.toLowerCase();
         let txt = ele.getElementsByTagName('p')[1].innerText.toLowerCase();
@@ -222,11 +222,15 @@ search.addEventListener('input', () => {
         }
 
     })
-    if(input!='')
-    main.style.display = 'none';
+    if (input != '')
+        main.style.display = 'none';
     else
-    main.style.display = 'flex';
+        main.style.display = 'flex';
 
 });
 
+// Displating current year in copyright text
+let copyrightText = document.getElementById("copyright");
+let currentYear = new Date().getFullYear();
+copyrightText.innerHTML = `Superverse ${currentYear} | Raj Patel`;
 //Finally all bugs are fixed...
